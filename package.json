@@ -1,7 +1,7 @@
 {
   "name": "dirmatch",
   "version": "0.0.0",
-  "description": "Match multiple patterns with all paths in directory",
+  "description": "Match multiple patterns with all files in directory",
   "main": "index.js",
   "repository": {
     "type": "git",

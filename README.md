@@ -1,6 +1,6 @@
 #dirmatch
 
-Match multiple patterns with all paths in directory using
+Match multiple patterns with all files in directory using
 [minimatch](https://github.com/isaacs/minimatch).
 
 ##Install
