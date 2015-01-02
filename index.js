@@ -1,6 +1,6 @@
 var path = require('path')
 var _ = require('underscore')
-var walkdir = require('walkdir')
+var walk = require('walk-sync')
 var minimatch = require('minimatch')
 
 function applyMatches(matches) {
@@ -14,10 +14,7 @@ function applyMatches(matches) {
 }
 
 var dirmatch = function(dir, patterns, options) {
-	var abspaths = walkdir.sync(dir)
-	var paths = _.map(abspaths, function(abspath) {
-		return path.relative(dir, abspath)
-	})
+	var paths = walk(dir)
 	var matches = _.map(patterns, function(pattern) {
     var exclusion = pattern.indexOf('!') === 0
     if (exclusion) pattern = pattern.slice(1)

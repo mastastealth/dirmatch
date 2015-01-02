@@ -21,6 +21,6 @@
   "dependencies": {
     "minimatch": "^2.0.1",
     "underscore": "^1.7.0",
-    "walkdir": "0.0.7"
+    "walk-sync": "^0.1.3"
   }
 }
