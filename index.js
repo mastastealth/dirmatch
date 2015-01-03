@@ -1,4 +1,3 @@
-var path = require('path')
 var _ = require('underscore')
 var walk = require('walk-sync')
 var minimatch = require('minimatch')
@@ -15,10 +14,13 @@ function applyMatches(matches) {
 
 var dirmatch = function(dir, patterns, options) {
 	var paths = walk(dir)
+	var filesPaths = _.filter(paths, function(path) {
+		return path[path.length - 1] !== '/'
+	})
 	var matches = _.map(patterns, function(pattern) {
     var exclusion = pattern.indexOf('!') === 0
     if (exclusion) pattern = pattern.slice(1)
-		var matches = minimatch.match(paths, pattern, options)
+		var matches = minimatch.match(filesPaths, pattern, options)
 		return {exclusion: exclusion, matches: matches}
 	})
 	return applyMatches(matches)

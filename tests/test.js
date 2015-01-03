@@ -3,7 +3,7 @@ var path = require('path')
 
 var dirmatch = require('..')
 
-describe('glob-array', function() {
+describe('dirmatch', function() {
 	var DIR = path.join(__dirname, 'files')
 
 	var PATTERNS = [
@@ -15,6 +15,11 @@ describe('glob-array', function() {
 		'scripts/index.js',
 		'styles/index.css'
 	]
+
+	it('does not finds dirs', function() {
+		var files = dirmatch(DIR, ['**'])
+		assert.deepEqual(files, EXPECTED_FILES)
+	})
 
 	it('find files using all patterns', function() {
 		var files = dirmatch(DIR, PATTERNS)
