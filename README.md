@@ -20,7 +20,7 @@ var matches = dirmatch('path/of/dir', [
 ])
 ```
 
-###dirmatch(dir, patterns, [options])
+###dirmatch(dir, patterns, options)
 
 Matches patterns with paths in directory.
 <br>
@@ -41,9 +41,9 @@ List of minimatch patterns.
 Patterns that begin with `!` will exclude files.
 Patterns are processed in order, so inclusion and exclusion order is significant.
 
-####[options]
+####options
 
-Type: `options`
+Type: `object`
 
 Options for minimatch.
 
