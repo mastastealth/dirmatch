@@ -16,7 +16,7 @@ var dirmatch = require('dirmatch')
 
 var matches = dirmatch('path/of/dir', [
   '*.js',
-    '!node/*.js'
+  '!node/*.js'
 ])
 ```
 
