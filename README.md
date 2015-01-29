@@ -16,11 +16,11 @@ var dirmatch = require('dirmatch')
 
 var matches = dirmatch('path/of/dir', [
   '*.js',
-    '!node/*.js'
+  '!node/*.js'
 ])
 ```
 
-### dirmatch(dir, patterns, [options])
+### dirmatch(dir, patterns, options)
 
 Matches patterns with paths in directory.
 <br>
