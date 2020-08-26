@@ -1,6 +1,6 @@
 {
   "name": "dirmatch",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Match multiple patterns with all files in directory",
   "main": "index.js",
   "repository": {
@@ -19,8 +19,8 @@
   "author": "sunflowerdeath",
   "license": "public domain",
   "dependencies": {
-    "minimatch": "^2.0.1",
+    "minimatch": "^3.0.4",
     "underscore": "^1.7.0",
-    "walk-sync": "^0.1.3"
+    "walk-sync": "^2.2.0"
   }
 }
